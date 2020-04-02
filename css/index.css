@@ -1,7 +1,35 @@
+body {
+  font-family: 'Sen', sans-serif;
+}
+
+button {
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+  background-color: #573fc4;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+:root {
+  --rowNum: 4;
+  --colNum: 5;
+  --gridHeight: 120px;
+  --wrapperH: 40px;
+  --randomBackgroundColor: #2196F3;
+  /* // for demonstrating the use of CSS Variables */
+}
+
 .grid-container {
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: #2196F3;
+  grid-template-columns: repeat(var(--colNum), auto);
+  background-color: var(--randomBackgroundColor);
   padding 10px;
 }
 
