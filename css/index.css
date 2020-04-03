@@ -16,6 +16,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: red;
+}
+
 :root {
   --rowNum: 4;
   --colNum: 5;

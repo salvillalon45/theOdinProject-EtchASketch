@@ -7,7 +7,6 @@ let canvasSize;
 function validateInput(input) {
   // If they enter something that is not a number. If they press the esc key, it will return null, but since we are converting the prompt
   // response into a Number type it will convert null into 0 (zero)
-  console.log("What is input:: " + input);
   if (isNaN(input) || input === 0) {
     return false;
   }
@@ -66,17 +65,23 @@ function createGrid(canvasSize) {
 }
 
 
-// Here we using mouseover to hover over each box
+
 function blackAndWhiteGrid() {
-
+  // Here we using mouseover to hover over each box
+  document.getElementById("grid-container").addEventListener("mouseover", function( event ) {
+    // highlight the mouseenter target
+    event.target.style.backgroundColor = "black";
+  }, false);
 }
-document.getElementById("grid-container").addEventListener("mouseover", function( event ) {
-  // highlight the mouseenter target
-  let color = generateRandomColor();
-  console.log("What is color:: " + color);
-  event.target.style.backgroundColor = "#" + color;
-}, false);
 
+function randomColorGrid() {
+  // Here we using mouseover to hover over each box
+  document.getElementById("grid-container").addEventListener("mouseover", function( event ) {
+    // highlight the mouseenter target
+    let color = generateRandomColor();
+    event.target.style.backgroundColor = "#" + color;
+  }, false);
+}
 
 // Creating the default grid
 createGrid(canvasSize);
