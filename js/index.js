@@ -64,8 +64,6 @@ function createGrid(canvasSize) {
   document.documentElement.style.setProperty("--rowNum", canvasSize);
 }
 
-
-
 function blackAndWhiteGrid() {
   // Here we using mouseover to hover over each box
   document.getElementById("grid-container").addEventListener("mouseover", function( event ) {
@@ -81,6 +79,17 @@ function randomColorGrid() {
     let color = generateRandomColor();
     event.target.style.backgroundColor = "#" + color;
   }, false);
+}
+
+function resetGrid() {
+  // Reset the grid since they will input new canvas size
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
+  }
+
+  // Creating the grid again
+  createGrid(canvasSize);
+
 }
 
 // Creating the default grid
