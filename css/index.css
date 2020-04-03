@@ -1,7 +1,9 @@
+/* Change the font of the website */
 body {
   font-family: 'Sen', sans-serif;
 }
 
+/* Styles for each button */
 button {
   font-family: 'Sen', sans-serif;
   font-weight: bold;
@@ -16,19 +18,28 @@ button {
   cursor: pointer;
 }
 
+/* Hover effect for each button */
 button:hover {
   background-color: red;
 }
 
+/* For button that takes you to GitHub Repo */
+#github-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/*
+  CSS Varialbles. This turned out to be really useful! I learned from here:
+  https://medium.com/@fionnachan/dynamic-number-of-rows-and-columns-with-css-grid-layout-and-css-variables-cb8e8381b6f2
+*/
 :root {
   --rowNum: 4;
   --colNum: 5;
-  --gridHeight: 120px;
-  --wrapperH: 40px;
   --randomBackgroundColor: #2196F3;
-  /* // for demonstrating the use of CSS Variables */
 }
 
+/* This represents the container that contains the entire grid */
 .grid-container {
   margin-top: 20px;
   display: grid;
@@ -37,9 +48,9 @@ button:hover {
   padding 10px;
 }
 
+/* This represents on box in the container */
 .grid-box {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  text-align: center;
 }
